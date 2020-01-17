@@ -1,0 +1,44 @@
+#defective code....To be improved
+val = []
+myval = []
+inside = []
+
+myval.append(inside)
+
+val.append(myval)
+value = [3,2,1,4,5,6,7,8,9,1]
+
+#print(value[0])
+
+myval.append([])
+print("myval",myval)
+print("val",val)
+print("")
+
+myval[1].append(value[0])
+print("myval",myval)
+print("val",val)
+print("")
+
+myval.append([])
+print("myval",myval)
+print("val",val)
+print("")
+
+val.append([])
+print("myval",myval)
+print("val",val)
+print("")
+
+val[1].append(inside)
+print("myval",myval)
+print("val",val)
+print("")
+
+#myval[2].append(inside)
+print("myval",myval)
+print("val",val)
+print("") 
+
+print(myval) 
+
