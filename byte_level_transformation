@@ -1,0 +1,54 @@
+import numpy as np
+import pydicom
+import sys
+import struct
+from matplotlib import pyplot as plt
+import dicom
+import pylab
+import subprocess
+import os
+from _io import BytesIO
+import _io
+
+#prog = r'C:\\Users\\Trainee\\Desktop\\'
+
+#ds = pydicom.dcmread(r"C:\Users\Trainee\Desktop\0002.dcm")
+ds = pydicom.read_file(r"C:\Users\Trainee\Desktop\0002.dcm")
+img_bin = open(r"C:\\Users\\Trainee\\Desktop\\0002.dcm","r")
+#array = img_bin.readlines()
+
+print(list(bytearray(ds.PixelData)))
+val = list(bytearray(ds.PixelData))
+#print(np.shape(np.asarray(list(bytearray(ds.PixelData)))))
+#print(ds.set_original_encoding)
+#print(ds.FrameIncrementPointer)
+#bytes.fromhex(ds.pixel_array)
+#print(ds.pixel_array)
+#print(ds.ImageType)
+#print(ds.type)
+
+#print(type(img_bin))
+
+#f = _io.BytesIO(img_bin)
+#print(_io.TextIOWrapper.readlines(img_bin))
+#print(_io.BufferedRandom.read1(img_bin))
+
+#print(val)
+#print(bytearray.hex(img_bin))
+#img_bin = open(r"C:\Users\Trainee\Desktop\test_file.txt","wb+")
+#for i in range(2):
+ #   img_bin.write(bytes(int(ds.pixel_array)))
+
+#img_bin.close()
+#pylab.imshow( ds.pixel_array, cmap=pylab.cm.bone)
+
+#pylab.show()
+#subprocess.check_call(["gcc", r"ConsoleApplication1.cpp", "-oConsoleApplication", "-std=c99", '-w', '-Ofast'])
+#subprocess.check_call(["ConsoleApplication"], stdin = sys.stdin)
+#subprocess.Popen(r"ConsoleApplication1" "-input" "ConsoleApplication1.cpp" "-output" "spam spam.txt" "-cmd" "echo '$MONEY'")
+
+#print(array)
+while(val == !NULL)
+    obj_slice = slice(1, 3, 1)
+    print(val[obj_slice])
+    
