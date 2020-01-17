@@ -1,0 +1,35 @@
+import numpy
+import PIL
+from PIL import Image
+import _io
+
+#Create an index of arrays
+inside = []
+holder = []
+container = []
+row = 740
+cols = 490
+list_file = open("C:/Users/Trainee/Desktop/test_file.txt","rb+")
+list_file.close()
+list_file = open("C:/Users/Trainee/Desktop/grayscale_1.png","rb+")
+#value = _io.BufferedReader.read(list_file)
+#print(value)
+str_obj = _io.TextIOWrapper.readlines(list_file)
+#str_obj = _io.BufferedRandom.read1(list_file)
+#print(str(str_obj).split(','))
+#array_val = numpy.array(str_obj,dtype=numpy.uint8)
+#print(list(str_obj))
+for i,k in enumerate(str_obj):
+    #print(i,k)
+    print(str_obj.index('\ba'))
+    #array_val = numpy.array(k,dtype=numpy.uint8)
+
+
+#-------------------------------------------------------------------
+
+#print("my Value is: ", array_val)
+#MyImage_ = Image.fromarray(array_val)
+#MyImage_.save(r'C:/Users/Trainee/Desktop/new.png')
+#print(array_val)
+#print(int(str(str_obj)))
+list_file.close()
