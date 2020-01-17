@@ -1,0 +1,51 @@
+# dtype parameter 
+import numpy as np
+from PIL import Image
+import PIL as pil
+import pydicom
+import os
+import dicom
+from matplotlib import pyplot as plt
+import sys
+
+#file = open(r'C:\Program Files\Python37-32\Lib\site-packages\pydicom\data\test_files\OBXXXX1A_2frame.dcm', 'r+')
+
+path = r'C:\Program Files\Python37-32\Lib\site-packages\pydicom\data\test_files\CT_small.dcm'
+
+dicimg = pydicom.dcmread(path)
+
+#myarray3 = bytes(file)
+#imagearr = np.asarray(img) 
+
+#myarray2 = bytes.fromhex(file)
+#a = np.array(myarray2, dtype = bytes) 
+#print(a)
+#print(myarray)
+
+#def load_scan(path):
+#    slices = pydicom.read_file(path)
+ #   sorted(slices,key = lambda x: int(x.InstanceNumber))
+  #  try:
+   #     slice_thickness = np.abs(slices[0].ImagePositionPatient[2] - slices[1].ImagePositionPatient[2])
+    #except:
+     #   slice_thickness = np.abs(slices[0].SliceLocation - slices[1].SliceLocation)
+        
+    #for s in slices:
+     #   s.SliceThickness = slice_thickness
+        
+    #return slices
+
+#print(dicimg.shape)
+val = dicimg.PixelData
+print(val)
+print(val.split(b'\\',512))
+val1 = bin(int.from_bytes(val, byteorder=sys.byteorder))
+print(val1)
+array = np.array(dicimg)
+print(array.shape)
+
+#img = load_scan(dicimg)
+#im1 = array[0]
+#im1 = np.reshape(array, (1, 1))
+#plt.plot(im1)
+#plt.show()
