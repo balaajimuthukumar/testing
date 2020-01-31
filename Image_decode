@@ -1,0 +1,89 @@
+"""import base64
+import _io
+
+value_ = _io.BufferedRandom.read(file)
+value = base64.b64decode(value_)
+file.close()"""
+#file = open(r"C:\Users\trainee\Desktop\download_2_new.jpg","wb+")
+"""file.write(value_)
+file.close()"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+import _io
+#file = open(r"C:\Users\trainee\Desktop\ndarray.txt","rb+")
+"""value_ = _io.TextIOWrapper.readlines(file)
+print(type(value_))
+#val = list()
+for i in value_:
+    val = i.decode('ASCII')
+    print(val)
+    print(type(val))
+#value_ = _io.BufferedRandom.read(file)
+N = val
+print(N)
+print(type(N))"""
+#list_file = open("C:/Users/Trainee/Desktop/test_file.txt","w+")
+"""s = slice(1,len(val)-1,1)
+for i in val[1:len(val)-1:1]:
+    #print(i)
+    new = i
+    try:
+        #print(int(new))
+        t = np.arange(int(new))
+        list_file.writelines(new)
+        #myval.append(i)
+        #print(myval)
+    except:
+        
+        list_file.writelines(new)
+        #newval = "".join(myval)
+        #myval.append(newval)"""
+        
+#t = np.arange(N)
+"""print(t)
+print("..........")"""
+"""f = np.cos(2*np.pi*t/N)
+print(f)
+ft = np.fft.fft(f)
+#print(ft)
+ftx = np.fft.ifft(ft)
+# Plot the original sine wave using inverse Fourier transform
+plt.plot(t, ftx);
+plt.title("Sine wave plotted using inverse Fourier transform");
+plt.xlabel('Time')
+plt.ylabel('Amplitude')
+plt.grid(True)
+plt.show()"""
+
+#list_file = open("C:/Users/Trainee/Desktop/test_file.txt","rb+")
+"""str_obj = _io.TextIOWrapper.readlines(list_file)
+
+for i,k in enumerate(str_obj):
+    print(i)
+    print(k)"""
+
+#var = " b / a l s"
+#a = iter(var)
+list_file = open("C:/Users/Trainee/Desktop/test_file.txt","r+")
+value = _io.TextIOWrapper.readlines(list_file)
+print(type(value))
+while(1):
+    for i in new[1:len(new):1]:
+        print(i)
+        if i == ',':
+            continue
+        else:
+            print(i)
+    print("The end")
+    
+"""print(a)
+for i in var[1:len(var):1]:
+    if i.isspace:
+        print("checked")
+        
+    if i == ",":
+        print("checked1")
+        
+    print("done")"""
+
