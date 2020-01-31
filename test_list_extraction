@@ -1,0 +1,113 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Oct 20 23:20:44 2018
+
+@author: mbala
+"""
+import _io
+import struct
+import imghdr
+from PIL import Image
+import array
+from array import*
+new_data = []
+inside = []
+holder = []
+holder.append([])
+valuez = bytearray()
+imageWidth = int()
+imageHeight = int()
+
+#valuez = []
+#------------------------------Image resolution detection--------------------------------------------------------------
+#list_file = open("C:/Users/mbala/Desktop/test.txt","rb+")
+
+filename = "C:/Users/Trainee/Desktop/jfifimage.jpg"
+def jpeg_res(filename):
+   """This function prints the resolution of the jpeg image file passed into it"""
+   # open image for reading in binary mode
+   with open(filename,'rb+') as img_file:
+       # height of image (in 2 bytes) is at 164th position
+       img_file.seek(163)
+       # read the 2 bytes
+       a = img_file.read(2)
+       # calculate height
+       height = (a[0] << 8) + a[1]
+       # next 2 bytes is width
+       a = img_file.read(2)
+       # calculate width
+       width = (a[0] << 8) + a[1]
+   print("The resolution of the image is",width,"x",height)
+   imageWidth = width
+   imageHeight = height
+jpeg_res(filename)
+
+#---------------------Extracting the numerical pixel data from the binary list and storing it in array------------------
+#Use the array to reconstruct the image
+img_file = open(r"C:/Users/Trainee/Desktop/download_2_1.jpg","rb")
+myvalue1 = _io.BufferedReader.read(img_file)
+#myvalue = _io.BufferedRandom.read(img_file)
+new_file = open(r"C:/Users/Trainee/Desktop/test_file2.txt","w+")
+new_file.writelines(str(list(myvalue1)))
+v = 0
+#myvalue = _io.TextIOWrapper.read(list_file)
+#write_file = open(C:/Users/Trainee/Desktop/)
+#value = "hello, balaaji, how are you?"
+"""for i,k in enumerate(myvalue):
+    #print(k)
+    #print(str_obj.index('\ba'))
+    #print(len(myvalue))
+    if i<=300:
+       map(k,holder[v])
+       holder.append([k])
+    else:
+       v += 1
+       map(k,holder[v])
+       holder.append([k])
+    myval = slice(0,len(myvalue),1)
+    valuez = myvalue[myval]
+    #print(type(valuez))
+    #print(i)
+    try:
+      new_data[i:] = valuez[i:] 
+      #print(int(new_data))
+    except IndexError as error:
+        print(error)
+        img_file.close()
+        print("i value: ", i)
+        break
+    #new_data[i] = valuez[i]
+img_file.close()
+#print(valuez[0])
+#print(valuez[1])
+#print(valuez[2])
+#print(valuez[3])
+print(len(valuez))
+print(holder)
+
+print(holder)"""
+
+#im = Image.frombytes("RGBA", (640, 480), new_data)
+#image_name_2d = "images/img2d-" + ".jpg"
+#im.save(image_name_2d, "jpg")
+#im.show
+#---------------------Extracting the numerical pixel data from the binary list------------------------------------------
+
+"""new_file = open("C:/Users/Trainee/Desktop/test_file1.txt","a+")
+for i,k in enumerate(myvalue):
+    #print(i,k)
+    #print(str_obj.index('\ba'))
+    myval = slice(1,len(myvalue),1)
+    valuez = myvalue[myval]
+    try:
+        new_file.writelines(str(valuez[i])+" ")
+    except IndexError:
+       new_file.close()
+       print("i value: ", i)
+       break
+       
+print("the end")"""
+
+"""print("hai")
+for i in new_data:
+   print(new_data[i])"""
